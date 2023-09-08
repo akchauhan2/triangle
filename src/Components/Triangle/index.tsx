@@ -1,4 +1,3 @@
-import React from "react";
 import TriangleAreaComponent from "./Area";
 
 function Triangle() {

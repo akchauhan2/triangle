@@ -1,4 +1,3 @@
-import viteLogo from "/vite.svg";
 import "./App.scss";
 import Numbers from "./Components/Numbers";
 import Triangle from "./Components/Triangle";

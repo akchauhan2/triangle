@@ -1,4 +1,3 @@
-import React from "react";
 import NumberInputComponent from "./NumberInputComponent";
 import "./number.style.scss";
 function Numbers() {
