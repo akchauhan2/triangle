@@ -1,4 +1,4 @@
-## [Demo](https://www.dev.akchauhan2.com/triangle) 
+## [Demo](https://dev.akchauhan2.com/triangle) 
 # Write a typescript react program to do the following
    - There is a text input with a number. If the number is filled in then display on the page the numbers 1,2,3,4 up until the number. So if the user types in the number 10, display the numbers 1,2,3,4,5,6,7,8,9,10
    - There are two other text inputs: One labeled height, one labeled width. When there are numbers in here, display the area of a triangle with that height and width
