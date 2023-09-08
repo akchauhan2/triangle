@@ -2,10 +2,11 @@ name: Triangle App test
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  build:
+  web-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +16,7 @@ jobs:
       - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: "18"
 
       - name: Install dependencies
         run: npm install
@@ -34,8 +35,3 @@ jobs:
           password: ${{ secrets.ftp_password }}
           server-dir: /developer/triangle/
           local-dir: ./dist/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            api.php
