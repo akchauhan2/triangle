@@ -110,6 +110,10 @@ input[type="text"] {
   #root {
     background: unset;
   }
+  .app {
+    opacity: 1;
+    display: block;
+  }
   .wrapper {
     display: block;
     max-width: 100%;
