@@ -24,7 +24,7 @@ function NumberInputComponent() {
 
   return (
     <div className="number-input-component">
-      <h2>Number Input Component</h2>
+      <h2 className="heading">Number Input Component</h2>
       <input
         type="number"
         placeholder="Enter a number"

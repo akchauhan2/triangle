@@ -27,7 +27,7 @@ const TriangleAreaComponent = () => {
 
   return (
     <div className="center">
-      <h2>Triangle Area Calculator</h2>
+      <h2 className="heading">Triangle Area Calculator</h2>
       <div>
         <label htmlFor="height-input">Height: </label>
         <input
