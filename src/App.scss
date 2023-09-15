@@ -148,29 +148,6 @@ input[type="text"] {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-  #root {
-    background: unset;
-  }
-  .app {
-    opacity: 1;
-    display: block;
-  }
-  .wrapper {
-    display: block;
-    max-width: 100%;
-    overflow: auto;
-  }
-  .card {
-    padding: 1em 0.2em;
-    box-sizing: border-box;
-  }
-  input[type="text"] {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-
 .heading {
   margin-bottom: 1em;
 }
@@ -179,6 +156,7 @@ input[type="text"] {
   align-items: center;
   justify-content: center;
   gap: 1em;
+  flex-wrap: wrap;
   .dragon {
     padding: 10px;
     border-radius: 1em;
@@ -197,4 +175,35 @@ input[type="text"] {
 }
 .m-0 {
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #root {
+    background: unset;
+  }
+  .app {
+    opacity: 1;
+    display: block;
+    overflow: auto;
+  }
+  .wrapper {
+    display: block;
+    max-width: 100%;
+    overflow: auto;
+  }
+  .card {
+    padding: 1em 0.2em;
+    box-sizing: border-box;
+  }
+  .dragons {
+    margin-top: 1em;
+    flex-direction: column;
+    .dragon {
+      width: 100%;
+    }
+  }
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
