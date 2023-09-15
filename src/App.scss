@@ -157,7 +157,9 @@ input[type="text"] {
   justify-content: center;
   gap: 1em;
   flex-wrap: wrap;
+  user-select: none;
   .dragon {
+    position: relative;
     padding: 10px;
     border-radius: 1em;
     display: block;
@@ -176,7 +178,30 @@ input[type="text"] {
 .m-0 {
   margin: 0;
 }
-
+.damage-btn {
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+}
+.reset-button {
+  padding: 0;
+  font-size: 1em;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  width: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  text-align: center;
+  height: 1em;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
 @media screen and (max-width: 768px) {
   #root {
     background: unset;

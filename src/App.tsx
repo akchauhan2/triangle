@@ -7,7 +7,7 @@ import { Alive, Dragon as DragonType } from "./type";
 
 function App() {
   const [dragons, setDragons] = React.useState<DragonType[]>(
-    new Array(5).fill(0).map((_, id) => ({
+    new Array(6).fill(0).map((_, id) => ({
       id,
       name: "Dragon " + (id + 1),
       health: id == 2 ? 40 : 100,
