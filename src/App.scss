@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background: #323232;
   color: #fff;
@@ -74,11 +89,21 @@ body,
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  &:first-child {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+  }
+  &:last-child {
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
 }
 
 .creadits {
   text-align: center;
   color: #888;
+  margin: 0;
+  padding: 10px;
 }
 
 .wrapper {
@@ -148,4 +173,28 @@ input[type="text"] {
 
 .heading {
   margin-bottom: 1em;
+}
+.dragons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  .dragon {
+    padding: 10px;
+    border-radius: 1em;
+    display: block;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: rgb(204, 219, 232, 0.04) 3px 3px 6px 0px inset,
+      rgba(255, 255, 255, 0.05) -3px -3px 6px 1px inset;
+    .damage-btn {
+      margin-top: 10px;
+    }
+  }
+}
+.m-0 {
+  margin: 0;
 }
