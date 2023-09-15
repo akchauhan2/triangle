@@ -13,8 +13,8 @@ export function DragonComponent({
       d.id === dragon.id
         ? {
             ...d,
-            health: Math.max(0, d.health - 20),
-            alive: d.health - 20 <= 0 ? "dead" : "alive",
+            health: Math.max(0, d.health - 10),
+            alive: d.health - 10 <= 0 ? "dead" : "alive",
           }
         : d
     );

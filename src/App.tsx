@@ -10,7 +10,7 @@ function App() {
     new Array(5).fill(0).map((_, id) => ({
       id,
       name: "Dragon " + (id + 1),
-      health: 100,
+      health: id == 2 ? 40 : 100,
       alive: "alive" as Alive,
     }))
   );
