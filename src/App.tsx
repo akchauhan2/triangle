@@ -4,6 +4,7 @@ import Numbers from "./Components/Numbers";
 import Triangle from "./Components/Triangle";
 import Dragon from "./Dragon";
 import { Alive, Dragon as DragonType } from "./type";
+import Practice from "./Components/Practice";
 
 function App() {
   const [dragons, setDragons] = React.useState<DragonType[]>(
@@ -25,9 +26,10 @@ function App() {
           <Triangle />
         </div>
       </div>
-
-      <Dragon dragons={dragons} setDragons={setDragons} />
-
+      <div className="bg">
+        <Dragon dragons={dragons} setDragons={setDragons} />
+        <Practice />
+      </div>
       <p className="creadits">Submitted by Ajay Kumar Chauhan</p>
     </div>
   );

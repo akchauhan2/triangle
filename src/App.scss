@@ -53,6 +53,7 @@ body,
   gap: 10px;
   vertical-align: middle;
 
+  overflow: auto;
   padding: 2rem;
   height: 100%;
   width: 100%;
@@ -140,6 +141,7 @@ input[type="text"] {
   width: 300px;
   max-width: 100%;
   background-color: #f4f4f4;
+  margin: 0;
   color: #333;
   font-weight: bold;
 }
@@ -209,7 +211,6 @@ input[type="text"] {
   .app {
     opacity: 1;
     display: block;
-    overflow: auto;
   }
   .wrapper {
     display: block;
@@ -231,4 +232,14 @@ input[type="text"] {
     width: 100%;
     box-sizing: border-box;
   }
+}
+.bg {
+  background: #323232;
+}
+
+.notes-keeper {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1em;
+  margin: 10px 0;
+  border-radius: 1em;
 }
