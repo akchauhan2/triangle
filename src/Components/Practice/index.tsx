@@ -12,7 +12,7 @@ function Practice() {
     setInput("");
   };
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInput(event.target.value);
   };
 
@@ -41,17 +41,19 @@ function Practice() {
     <div className="notes-keeper">
       <h2>Notes Keeper</h2>
       <form onSubmit={addInfo} className="wrapper" style={{ gap: "1em" }}>
-        <input type="text" value={input} onChange={handleInputChange} />
+        <textarea value={input} onChange={handleInputChange} />
         <button disabled={!input} type="submit">
           Add Info
         </button>
       </form>
       {infos.map((info, index) => (
         <div className="info align-center" key={index}>
-          <p className="info-content">
-            <span className="index">{index + 1}.</span>
-            {info}
-          </p>
+          <textarea
+            disabled
+            className="info-content"
+            defaultValue={info}
+            rows={info.split("\n").length}
+          ></textarea>
           <button className="icon" onClick={() => deleteItem(index)}>
             <svg
               stroke="currentColor"
