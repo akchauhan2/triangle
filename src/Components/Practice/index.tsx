@@ -48,7 +48,10 @@ function Practice() {
       </form>
       {infos.map((info, index) => (
         <div className="info align-center" key={index}>
-          <p className="info-content">{info}</p>
+          <p className="info-content">
+            <span className="index">{index + 1}.</span>
+            {info}
+          </p>
           <button className="icon" onClick={() => deleteItem(index)}>
             <svg
               stroke="currentColor"
