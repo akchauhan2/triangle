@@ -1,17 +1,15 @@
 import { useState } from "react";
 import CryptoJS from "crypto-js";
 
-type StringOrNumber = string | number;
-
-const encodeString = (string: StringOrNumber, salt: StringOrNumber): string => {
+const encodeString = (string: string, salt: string): string => {
   const ciphertext = CryptoJS.AES.encrypt(string, salt).toString();
   return ciphertext;
 };
 
 const Encoder: React.FC = () => {
-  const [string, setString] = useState<StringOrNumber>("");
-  const [password, setPassword] = useState<StringOrNumber>("");
-  const [encrypted, setEncrypted] = useState<StringOrNumber>("");
+  const [string, setString] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [encrypted, setEncrypted] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
