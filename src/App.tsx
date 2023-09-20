@@ -1,15 +1,19 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import Numbers from "./Components/Numbers";
 import Triangle from "./Components/Triangle";
 import Dragon from "./Dragon";
-import { Alive, Dragon as DragonType } from "./type";
 import Notes from "./Components/Notes";
 import Passwords from "./Components/Passwords";
 
 type ComponentID = string | undefined | null;
-
+interface Components {
+  id: ComponentID;
+  heading: string;
+  Component: JSX.Element;
+}
 const TriangleApp: React.FC = () => {
+  console.log("TTriangleApp");
   return (
     <div className="flex-1 flex-column gap-1 d-flex">
       <h1>Numbers & Triangle</h1>
@@ -25,25 +29,12 @@ const TriangleApp: React.FC = () => {
   );
 };
 
-interface Components {
-  id: ComponentID;
-  heading: string;
-  Component: JSX.Element;
-}
 function App() {
-  const [dragons, setDragons] = useState<DragonType[]>(
-    new Array(6).fill(0).map((_, id) => ({
-      id,
-      name: "Dragon " + (id + 1),
-      health: id == 2 ? 40 : 100,
-      alive: "alive" as Alive,
-    }))
-  );
   const [triangleAsApp, setTriangleAsApp] = useState<boolean>(false);
   const defaultApps = [
     {
       id: "dragons",
-      Component: <Dragon dragons={dragons} setDragons={setDragons} />,
+      Component: <Dragon />,
       heading: "Dragon GUI",
     },
     {

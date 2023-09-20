@@ -1,13 +1,15 @@
 import React from "react";
-import { Dragon } from "./type";
+import { Alive, Dragon } from "./type";
 
-export function DragonComponent({
-  dragons,
-  setDragons,
-}: {
-  dragons: Dragon[];
-  setDragons: React.Dispatch<React.SetStateAction<Dragon[]>>;
-}) {
+export function DragonComponent() {
+  const [dragons, setDragons] = React.useState<Dragon[]>(
+    new Array(6).fill(0).map((_, id) => ({
+      id,
+      name: "Dragon " + (id + 1),
+      health: id == 2 ? 40 : 100,
+      alive: "alive" as Alive,
+    }))
+  );
   const getBackgroundStyle = (): React.CSSProperties => ({
     background: `url('https://via.placeholder.com/150') repeat`,
     backgroundClip: `text`,
