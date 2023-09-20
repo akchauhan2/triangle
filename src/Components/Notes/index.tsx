@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Practice() {
+function Notes() {
   const [infos, setInfos] = useState<string[]>([]);
   const [input, setInput] = useState<string>("");
 
@@ -41,7 +41,11 @@ function Practice() {
     <div className="notes-keeper">
       <h2>Notes Keeper</h2>
       <form onSubmit={addInfo} className="wrapper" style={{ gap: "1em" }}>
-        <textarea value={input} onChange={handleInputChange} />
+        <textarea
+          className="flex-1 ml-1"
+          value={input}
+          onChange={handleInputChange}
+        />
         <button disabled={!input} type="submit">
           Add Info
         </button>
@@ -75,4 +79,4 @@ function Practice() {
   );
 }
 
-export default Practice;
+export default Notes;

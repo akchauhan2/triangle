@@ -4,7 +4,7 @@ import Numbers from "./Components/Numbers";
 import Triangle from "./Components/Triangle";
 import Dragon from "./Dragon";
 import { Alive, Dragon as DragonType } from "./type";
-import Practice from "./Components/Practice";
+import Notes from "./Components/Notes";
 import Passwords from "./Components/Passwords";
 
 function App() {
@@ -29,8 +29,8 @@ function App() {
       </div>
       <div className="bg">
         <Dragon dragons={dragons} setDragons={setDragons} />
-        <Practice />
         <Passwords />
+        <Notes />
       </div>
       <p className="creadits">Submitted by Ajay Kumar Chauhan</p>
     </div>
