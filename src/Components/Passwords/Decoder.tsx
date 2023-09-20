@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CryptoJS from "crypto-js";
 
 const decodeString = (string: string, salt: string): string => {
@@ -11,11 +11,9 @@ const Decoder: React.FC = () => {
   const [password, setPassword] = useState<string>("");
   const [decrypted, setDecrypted] = useState<string>("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log({ string, password });
+  useEffect(() => {
     setDecrypted(decodeString(string, password));
-  };
+  }, [string, password]);
 
   const handleStringChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setString(e.target.value);
@@ -28,7 +26,7 @@ const Decoder: React.FC = () => {
   return (
     <div className="border mt-2 card">
       <h3>Decode</h3>
-      <form onSubmit={handleSubmit} className="gap-1 p-1 d-flex w-100">
+      <div className="gap-1 p-1 d-flex w-100">
         <div className="flex-1 align-center gap-1 d-flex">
           <textarea
             value={string}
@@ -42,13 +40,10 @@ const Decoder: React.FC = () => {
             name="password"
             onChange={handlePasswordChange}
             className="rounded w-100 flex-1 p-1"
-            placeholder="Enter Your Password"
+            placeholder="Enter your Password"
           />
         </div>
-        <div className="d-flex flex-column justify-content-center">
-          <button type="submit">Decode</button>
-        </div>
-      </form>
+      </div>
       {decrypted && (
         <p className="d-flex flex-1 w-100 align-items-center gap-1 pr-1 pl-1">
           <label>Decrypted text: </label>

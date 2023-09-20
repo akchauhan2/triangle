@@ -319,3 +319,34 @@ input[type="password"] {
 .text-sm {
   font-size: 0.8rem;
 }
+.toggleBtn {
+  width: 100%;
+  margin: 0.2em 0;
+}
+.toggleBtna {
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+}
+.active-toggleBtn {
+  background: rgba(00, 255, 0, 0.1);
+  outline: none !important;
+  border: 2px solid rgba(00, 255, 0, 0.6);
+}
+.active-border {
+  border: 1px solid rgba(00, 255, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+}
+.triBtn {
+  background: rgba(00, 255, 0, 0.1);
+  position: absolute;
+  right: 3em;
+  padding: 5px 10px;
+  bottom: 5px;
+}
+
+textarea,
+input {
+  border-radius: 5px;
+}

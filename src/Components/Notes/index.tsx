@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Notes() {
+const Notes: React.FC = () => {
   const [infos, setInfos] = useState<string[]>([]);
   const [input, setInput] = useState<string>("");
 
@@ -77,6 +77,6 @@ function Notes() {
       ))}
     </div>
   );
-}
+};
 
 export default Notes;

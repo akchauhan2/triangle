@@ -3,7 +3,12 @@ import Decoder from "./Decoder";
 
 function Passwords() {
   return (
-    <div className="shadow shadow-2">
+    <div className="border card d-block-imp shadow shadow-2">
+      <h3 className="text-center">
+        Secure your confidential messages by encrypting them into a string that
+        can only be decrypted using your password.
+      </h3>
+
       <Encoder />
       <Decoder />
     </div>
