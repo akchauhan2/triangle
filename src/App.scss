@@ -1,3 +1,5 @@
+@import "./utilities.scss";
+
 * {
   box-sizing: border-box;
   vertical-align: middle;
@@ -270,4 +272,50 @@ input[type="text"] {
       justify-content: center;
     }
   }
+}
+.d-flex {
+  display: flex;
+}
+.w-100 {
+  width: 100%;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-0 {
+  flex: 0;
+}
+
+.gap-0 {
+  gap: 0;
+}
+.gap-1 {
+  gap: 0.5em;
+}
+.gap-2 {
+  gap: 1em;
+}
+
+.card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1em 0;
+  margin: 10px 0;
+  border-radius: 1em;
+}
+
+.rounded {
+  border-radius: 0.5em;
+}
+textarea,
+input,
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+  outline: none !important;
+
+  border: 1px solid #626262;
+}
+
+.text-sm {
+  font-size: 0.8rem;
 }
