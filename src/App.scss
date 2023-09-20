@@ -17,7 +17,7 @@ p {
 }
 body {
   background: #323232;
-  color: #fff;
+  color: #efefef;
 }
 html,
 body,
@@ -32,11 +32,20 @@ body,
   background-repeat: no-repeat;
   background-size: 20%;
   background-position: center center;
-
-  animation-name: bg;
-  animation-duration: 0.5s;
+  background-attachment: fixed;
+  animation-name: bgandremove;
+  // animation-duration: 0.5s;
   animation-delay: 0.75s;
   animation-fill-mode: forwards;
+}
+@keyframes bgandremove {
+  from {
+    background-size: 20%;
+  }
+  to {
+    background-size: 10%;
+    background: none;
+  }
 }
 @keyframes bg {
   from {
@@ -142,9 +151,9 @@ input[type="number"] {
 input[type="text"] {
   width: 300px;
   max-width: 100%;
-  background-color: #f4f4f4;
+
   margin: 0;
-  color: #333;
+
   font-weight: bold;
 }
 
@@ -329,12 +338,12 @@ input[type="password"] {
   margin-bottom: 5px;
 }
 .active-toggleBtn {
-  background: rgba(00, 255, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   outline: none !important;
-  border: 2px solid rgba(00, 255, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 .active-border {
-  border: 1px solid rgba(00, 255, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 10px;
 }
@@ -349,4 +358,22 @@ input[type="password"] {
 textarea,
 input {
   border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #bbb;
+  &::placeholder {
+    color: #999 !important;
+  }
+}
+
+.triangle-wrapper {
+  background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="whitesmoke" d="M247 65.16L32.34 440.8l61.79-35.7L247 137.6zm18 .38V137l158.3 271.3 62.7 36.1C412.2 318.2 338.6 191.8 265 65.54zM415.4 424.5l-321.3 1.4-62.72 36.2 445.82-1.9z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: center center;
+  max-height: 200px;
+  // background-attachment: fixed;
+  animation-name: bg;
+  animation-duration: 0.5s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
 }

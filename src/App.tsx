@@ -13,7 +13,7 @@ const TriangleApp: React.FC = () => {
   return (
     <div className="flex-1 flex-column gap-1 d-flex">
       <h1>Numbers & Triangle</h1>
-      <div className="wrapper">
+      <div className="wrapper triangle-wrapper">
         <div className="card">
           <Numbers />
         </div>

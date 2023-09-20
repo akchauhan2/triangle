@@ -45,6 +45,7 @@ const Notes: React.FC = () => {
           className="flex-1 ml-1"
           value={input}
           onChange={handleInputChange}
+          placeholder="Type your note here"
         />
         <button disabled={!input} type="submit">
           Add Info
