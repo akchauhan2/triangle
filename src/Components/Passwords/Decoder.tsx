@@ -2,8 +2,13 @@ import { useState, useEffect } from "react";
 import CryptoJS from "crypto-js";
 
 const decodeString = (string: string, salt: string): string => {
-  const ciphertext = CryptoJS.AES.decrypt(string, salt);
-  return ciphertext.toString(CryptoJS.enc.Utf8);
+  try {
+    const ciphertext = CryptoJS.AES.decrypt(string, salt);
+    return ciphertext.toString(CryptoJS.enc.Utf8);
+  } catch (error) {
+    console.log({ error });
+    return "";
+  }
 };
 
 const Decoder: React.FC = () => {

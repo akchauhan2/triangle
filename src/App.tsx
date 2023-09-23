@@ -13,7 +13,6 @@ interface Components {
   Component: JSX.Element;
 }
 const TriangleApp: React.FC = () => {
-  console.log("TTriangleApp");
   return (
     <div className="flex-1 flex-column gap-1 d-flex">
       <h1>Numbers & Triangle</h1>
